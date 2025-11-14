@@ -1,6 +1,7 @@
 package dev.coonfituuree;
 
 import dev.coonfituuree.carBuilder.Car;
+import dev.coonfituuree.carFactory.CarFactory;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,5 +21,9 @@ public class Main {
                 .build();
 
         System.out.println(car);
+
+       // через карфактори
+        Car car2 = CarFactory.createCar("economy").setBrand("BMW").setColor("black").build();
+        System.out.println(car2);
     }
 }
