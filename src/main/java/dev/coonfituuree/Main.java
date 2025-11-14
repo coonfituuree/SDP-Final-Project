@@ -2,28 +2,34 @@ package dev.coonfituuree;
 
 import dev.coonfituuree.carBuilder.Car;
 import dev.coonfituuree.carFactory.CarFactory;
+import dev.coonfituuree.carFactory.interfaces.ICar;
+import dev.coonfituuree.observer.CarRentalLogger;
 
 public class Main {
+
     public static void main(String[] args) {
 
+        CarFactory.addObserver(new CarRentalLogger());
 
+        ICar car1 = CarFactory.createCar("economy");
+        ICar car2 = CarFactory.createCar("luxury");
 
+        car1.showInfo();
+        car2.showInfo();
 
-        //Builder Pattern
-        Car car = new Car.CarBuilder()
-                .setBrand("Toyota")
-                .setModel("Camry")
-                .setYear(2022)
-                .setColor("Black")
-                .setType("Sedan")
-                .setTransmission("Automatic")
-                .setFuelType("Hybrid")
+        Car myEconomy = CarFactory.getPreset("economy")
+                .setColor("Red")
+                .setYear(2024)
+                .setFuelType("Petrol")
                 .build();
 
-        System.out.println(car);
+        Car mySUV = CarFactory.getPreset("suv")
+                .setColor("Black")
+                .setYear(2023)
+                .setTransmission("Manual")
+                .build();
 
-       // через карфактори
-        Car car2 = CarFactory.createCar("economy").setBrand("BMW").setColor("black").build();
-        System.out.println(car2);
+        System.out.println(myEconomy);
+        System.out.println(mySUV);
     }
 }
