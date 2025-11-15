@@ -1,6 +1,6 @@
-package dev.coonfituuree.patterns.carBuilder;
+package dev.coonfituuree.model;
 
-public class Car {
+public class Car implements CarItem{
     private final String brand;
     private final String model;
     private final int year;
@@ -63,14 +63,13 @@ public class Car {
     }
 
     @Override
-    public String toString() {
-        return "Brand: " + brand +
-                ", Model: " + model +
-                ", Year: " + year +
-                ", Color: " + color +
-                ", Type: " + type +
-                ", Transmission: " + transmission +
-                ", Fuel: " + fuelType;
+    public String getDescription() {
+        return brand + " " +  model + " " +year + " " +color + " " + type +" "  + transmission + " " + fuelType;
+
     }
 
+    @Override
+    public double getCost() {
+        return 0;
+    }
 }
