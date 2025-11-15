@@ -1,15 +1,19 @@
-package dev.coonfituuree.carFactory;
+package dev.coonfituuree.patterns.carFactory;
 
-import dev.coonfituuree.carBuilder.Car;
+import dev.coonfituuree.patterns.carBuilder.Car;
 import dev.coonfituuree.carFactory.carTypes.*;
-import dev.coonfituuree.carFactory.interfaces.ICar;
-import dev.coonfituuree.observer.CarEventManager;
+import dev.coonfituuree.patterns.carFactory.carTypes.EconomyCar;
+import dev.coonfituuree.patterns.carFactory.carTypes.LuxuryCar;
+import dev.coonfituuree.patterns.carFactory.carTypes.SUVCar;
+import dev.coonfituuree.patterns.carFactory.interfaces.ICar;
+import dev.coonfituuree.patterns.observer.CarEventManager;
+import dev.coonfituuree.patterns.observer.CarObserver;
 
 public class CarFactory {
 
     private static final CarEventManager events = new CarEventManager();
 
-    public static void addObserver(dev.coonfituuree.observer.CarObserver obs) {
+    public static void addObserver(CarObserver obs) {
         events.subscribe(obs);
     }
 

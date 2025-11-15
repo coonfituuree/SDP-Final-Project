@@ -1,6 +1,6 @@
-package dev.coonfituuree.carFactory.carTypes;
+package dev.coonfituuree.patterns.carFactory.carTypes;
 
-import dev.coonfituuree.carFactory.interfaces.ICar;
+import dev.coonfituuree.patterns.carFactory.interfaces.ICar;
 
 public class SUVCar implements ICar {
     @Override

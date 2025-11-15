@@ -1,4 +1,4 @@
-package dev.coonfituuree.observer;
+package dev.coonfituuree.patterns.observer;
 
 public class CarRentalLogger implements CarObserver {
     @Override

@@ -1,4 +1,4 @@
-package dev.coonfituuree.carBuilder;
+package dev.coonfituuree.patterns.carBuilder;
 
 public class Car {
     private final String brand;

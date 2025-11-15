@@ -1,9 +1,9 @@
 package dev.coonfituuree;
 
-import dev.coonfituuree.carBuilder.Car;
-import dev.coonfituuree.carFactory.CarFactory;
-import dev.coonfituuree.carFactory.interfaces.ICar;
-import dev.coonfituuree.observer.CarRentalLogger;
+import dev.coonfituuree.patterns.carBuilder.Car;
+import dev.coonfituuree.patterns.carFactory.CarFactory;
+import dev.coonfituuree.patterns.carFactory.interfaces.ICar;
+import dev.coonfituuree.patterns.observer.CarRentalLogger;
 
 public class Main {
 

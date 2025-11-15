@@ -1,4 +1,4 @@
-package dev.coonfituuree.observer;
+package dev.coonfituuree.patterns.observer;
 
 import java.util.ArrayList;
 import java.util.List;
